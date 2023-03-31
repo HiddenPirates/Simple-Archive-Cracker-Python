@@ -32,7 +32,7 @@ with open(password_dict_file, "r") as f:
     for password in tqdm(f, total=num_passwords):
         # Try to extract the ZIP file using the current password
         try:
-            cmd = [seven_zip_executable, "x", "-aoa", "-p{}".format(password.strip()), zip_file]
+            cmd = [seven_zip_executable, "t", "-aoa", "-p{}".format(password.strip()), zip_file]
             subprocess.check_output(cmd, stderr=subprocess.DEVNULL)
             # print("\nPassword found: {}".format(password.strip()))
             var = password.strip()
