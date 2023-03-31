@@ -16,7 +16,7 @@ var = ""
 
 
 # Prompt the user to enter the path to the password-protected ZIP file
-zip_file_input = input("Enter the path to the password-protected ZIP file: ")
+zip_file_input = input("Enter the path to the password-protected archive file: ")
 zip_file = os.path.normpath(zip_file_input.strip("\"'"))
 
 # Prompt the user to enter the path to the password dictionary file
